@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mycelium Works — Automatización Fúngica</title>
+  
+  <!-- Tipografía de Google Fonts (Outfit, Inter, Space Grotesk) según directriz UI/UX -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+  <div id="app-container">
+    <!-- Lienzo interactivo principal de fábrica de micelio infinito -->
+    <canvas id="sim-canvas"></canvas>
+
+    <!-- HUD Superior -->
+    <header class="hud-top">
+      <div class="hud-left">
+        <div class="hud-title-box">
+          <!-- 1 Único h1 según directriz SEO y accesibilidad -->
+          <h1>Mycelium Works</h1>
+          <p class="sub-title">Automatización y Fábrica de Micelio Bioluminiscente</p>
+        </div>
+
+        <!-- Inventario global y recursos disponibles -->
+        <div id="inventory-bar" class="inventory-bar">
+          <div class="inv-pill" title="Mineral de Fósforo">
+            <span class="inv-dot" style="background: #4ade80; color: #4ade80;"></span>
+            <span>Fósforo:</span>
+            <strong id="inv-phosphorus">0</strong>
+          </div>
+          <div class="inv-pill" title="Azúcar Vegetal">
+            <span class="inv-dot" style="background: #facc15; color: #facc15;"></span>
+            <span>Azúcar:</span>
+            <strong id="inv-plant_sugar">0</strong>
+          </div>
+          <div class="inv-pill" title="Nitrógeno Acuífero">
+            <span class="inv-dot" style="background: #38bdf8; color: #38bdf8;"></span>
+            <span>Nitrógeno:</span>
+            <strong id="inv-nitrogen_water">0</strong>
+          </div>
+          <div class="inv-pill" title="Compuesto Bioactivo">
+            <span class="inv-dot" style="background: #a855f7; color: #a855f7;"></span>
+            <span>Bioactivo:</span>
+            <strong id="inv-bioactive_compound">0</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- HUD Derecho: Panel de Producción por minuto & Minimapa de chunks -->
+      <aside class="hud-right">
+        <div id="stats-panel-container" class="stats-card">
+          <!-- Se inyecta dinámicamente desde statsPanel.js -->
+        </div>
+
+        <div class="minimap-card">
+          <canvas id="minimap-canvas" width="240" height="140"></canvas>
+        </div>
+      </aside>
+    </header>
+
+    <!-- HUD Inferior: Barra de construcción diegética y controles -->
+    <nav class="hud-bottom" id="build-menu-container">
+      <!-- Se inyecta dinámicamente desde buildMenu.js -->
+    </nav>
+
+    <!-- Modal del Árbol de Investigación Tecnológica -->
+    <section id="tech-modal" class="modal-overlay" aria-hidden="true">
+      <div class="modal-card">
+        <div class="modal-header">
+          <h2 class="modal-title">🌿 Árbol de Investigación Micelial</h2>
+          <button id="close-tech-btn" class="close-modal-btn" aria-label="Cerrar modal">&times;</button>
+        </div>
+        <div id="tech-grid" class="tech-grid">
+          <!-- Tecnologías generadas dinámicamente -->
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Script principal modular ES2024 -->
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+{
+  "resources": {
+    "phosphorus": {
+      "id": "phosphorus",
+      "name": "Mineral de Fósforo",
+      "description": "Mineral bioluminiscente de tono verdoso esencial para la transducción de energía.",
+      "color": "#4ade80",
+      "hsl": "hsl(142, 69%, 58%)",
+      "baseRate": 1.0,
+      "category": "raw"
+    },
+    "plant_sugar": {
+      "id": "plant_sugar",
+      "name": "Azúcar Vegetal",
+      "description": "Exudado radicular rico en sacáridos proveniente de la flora adyacente.",
+      "color": "#facc15",
+      "hsl": "hsl(48, 96%, 53%)",
+      "baseRate": 1.2,
+      "category": "raw"
+    },
+    "nitrogen_water": {
+      "id": "nitrogen_water",
+      "name": "Nitrógeno Acuífero",
+      "description": "Filtración freatomagmática saturada de amonio y nitratos asimilables.",
+      "color": "#38bdf8",
+      "hsl": "hsl(199, 89%, 60%)",
+      "baseRate": 0.8,
+      "category": "raw"
+    }
+  },
+  "recipes": [
+    {
+      "id": "bioactive_compound",
+      "name": "Compuesto Bioactivo",
+      "structureType": "reactor",
+      "craftTime": 3.0,
+      "inputs": {
+        "phosphorus": 2,
+        "plant_sugar": 1
+      },
+      "outputs": {
+        "bioactive_compound": 1
+      },
+      "description": "Catalizador hormonal que acelera la ramificación de hifas y síntesis enzimática."
+    },
+    {
+      "id": "mycelial_antibiotic",
+      "name": "Antibiótico Micelial",
+      "structureType": "purifier",
+      "craftTime": 4.5,
+      "inputs": {
+        "bioactive_compound": 1,
+        "nitrogen_water": 2
+      },
+      "outputs": {
+        "mycelial_antibiotic": 1
+      },
+      "description": "Protector celular antimicrobiano que inmuniza colonias y purifica fluidos celulares."
+    },
+    {
+      "id": "chitin_silk",
+      "name": "Seda de Quitina",
+      "structureType": "purifier",
+      "craftTime": 5.0,
+      "inputs": {
+        "plant_sugar": 3,
+        "nitrogen_water": 1
+      },
+      "outputs": {
+        "chitin_silk": 2
+      },
+      "description": "Polímero estructural hiperresistente y flexible para reforzar paredes hifales avanzadas."
+    },
+    {
+      "id": "spore_polymer",
+      "name": "Polímero de Esporas",
+      "structureType": "reactor",
+      "craftTime": 6.0,
+      "inputs": {
+        "chitin_silk": 2,
+        "bioactive_compound": 2,
+        "phosphorus": 3
+      },
+      "outputs": {
+        "spore_polymer": 1
+      },
+      "description": "Bioplástico de alta densidad celular para ensamblar megarreactores y núcleos fúngicos."
+    },
+    {
+      "id": "luminescent_essence",
+      "name": "Esencia Bioluminiscente",
+      "structureType": "reactor",
+      "craftTime": 4.0,
+      "inputs": {
+        "phosphorus": 3,
+        "nitrogen_water": 1
+      },
+      "outputs": {
+        "luminescent_essence": 2
+      },
+      "description": "Fluido de luciferina micelial concentrada para iluminación profunda y señalización óptica."
+    }
+  ]
+}

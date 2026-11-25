@@ -1,0 +1,76 @@
+{
+  "technologies": [
+    {
+      "id": "hyphae_tier2",
+      "name": "Hifas Engrosadas (Tier II)",
+      "tier": 1,
+      "description": "Engrosa los filamentos fúngicos duplicando la velocidad de transporte de nutrientes a 4 items/seg.",
+      "cost": {
+        "bioactive_compound": 10
+      },
+      "unlocks": {
+        "structures": ["hypha_t2"],
+        "speedMultiplier": 2.0
+      },
+      "requires": []
+    },
+    {
+      "id": "enzymatic_purification",
+      "name": "Purificación Enzimática",
+      "tier": 1,
+      "description": "Desbloquea los Purificadores Enzimáticos capaces de sintetizar Antibióticos Miceliales y Seda de Quitina.",
+      "cost": {
+        "bioactive_compound": 15,
+        "plant_sugar": 25
+      },
+      "unlocks": {
+        "structures": ["purifier"],
+        "recipes": ["mycelial_antibiotic", "chitin_silk"]
+      },
+      "requires": []
+    },
+    {
+      "id": "chitin_reinforcement",
+      "name": "Refuerzo de Quitina",
+      "tier": 2,
+      "description": "Amplía la capacidad de los Almacenes Fúngicos de 100 a 500 unidades por ranura.",
+      "cost": {
+        "chitin_silk": 20,
+        "phosphorus": 40
+      },
+      "unlocks": {
+        "storageCapacity": 500
+      },
+      "requires": ["enzymatic_purification"]
+    },
+    {
+      "id": "macro_reactor",
+      "name": "Biopolímeros Avanzados",
+      "tier": 2,
+      "description": "Permite la síntesis de Polímero de Esporas en Reactores de Esporas mejorados.",
+      "cost": {
+        "chitin_silk": 30,
+        "mycelial_antibiotic": 15
+      },
+      "unlocks": {
+        "recipes": ["spore_polymer"]
+      },
+      "requires": ["enzymatic_purification"]
+    },
+    {
+      "id": "mycelial_super_network",
+      "name": "Red Simbiótica Global",
+      "tier": 3,
+      "description": "Despierta la consciencia fúngica total, aumentando la tasa de extracción de todos los nódulos en +100%.",
+      "cost": {
+        "spore_polymer": 25,
+        "mycelial_antibiotic": 30,
+        "luminescent_essence": 40
+      },
+      "unlocks": {
+        "extractorEfficiency": 2.0
+      },
+      "requires": ["macro_reactor", "chitin_reinforcement"]
+    }
+  ]
+}
